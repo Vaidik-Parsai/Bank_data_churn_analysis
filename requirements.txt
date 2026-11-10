@@ -1,0 +1,18 @@
+# Core Machine Learning & Data Processing
+scikit-learn==1.9.0
+pandas==3.0.3
+numpy==2.4.4
+joblib==1.5.3
+
+# Visualization & Reporting
+matplotlib==3.10.9
+seaborn==0.13.2
+
+# API Serving & Validation
+fastapi==0.162.2
+uvicorn==0.54.0
+pydantic==2.14.3
+
+# Testing & Client
+pytest==9.2.0
+httpx==0.28.1

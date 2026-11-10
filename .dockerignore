@@ -1,0 +1,22 @@
+# Virtual environment & caches
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.matplotlib_cache/
+.ipynb_checkpoints/
+
+# Git & IDE files
+.git/
+.gitignore
+.vscode/
+.idea/
+*.swp
+
+# Logs & temp files
+*.log
+*.tmp
