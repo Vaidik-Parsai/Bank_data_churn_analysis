@@ -7,6 +7,9 @@ env/
 __pycache__/
 *.py[cod]
 
+# Matplotlib cache
+.matplotlib_cache/
+
 # Jupyter temporary files
 .ipynb_checkpoints/
 

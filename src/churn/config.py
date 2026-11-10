@@ -69,3 +69,4 @@ TEST_SIZE: Final[float] = 0.2
 CV_FOLDS: Final[int] = 5
 SCORING_METRIC: Final[str] = "roc_auc"
 DEFAULT_DECISION_THRESHOLD: Final[float] = 0.35
+

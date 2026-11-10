@@ -123,3 +123,4 @@ def test_cross_validation_wraps_pipeline(sample_raw_dataframe):
 
     assert len(scores) == 3
     assert all(0.0 <= s <= 1.0 for s in scores)
+

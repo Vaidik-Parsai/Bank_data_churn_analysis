@@ -1,0 +1,93 @@
+{
+  "model_name": "Bank Customer Churn Predictor (Random Forest Pipeline)",
+  "model_version": "1.0.0",
+  "training_timestamp_utc": "2026-11-10T10:26:28.380502+00:00",
+  "scikit_learn_version": "1.9.0",
+  "python_version": "3.14",
+  "random_state": 42,
+  "cv_folds": 5,
+  "primary_metric": "roc_auc",
+  "best_hyperparameters": {
+    "model__max_depth": 8,
+    "model__min_samples_leaf": 2,
+    "model__min_samples_split": 5,
+    "model__n_estimators": 200
+  },
+  "cross_validation_roc_auc_mean": 0.857,
+  "decision_threshold": 0.35,
+  "decision_threshold_rationale": "In customer retention, false negatives (missed attritors) have a far greater financial impact than false positives (retention intervention costs). Lowering the decision threshold from 0.50 to 0.35 boosts recall from 72.5% to 87.5% while maintaining defensible precision (36.7%).",
+  "baseline_comparison": {
+    "model": "LogisticRegression(class_weight='balanced')",
+    "test_metrics": {
+      "threshold": 0.5,
+      "roc_auc": 0.7772,
+      "pr_auc": 0.4679,
+      "precision": 0.3872,
+      "recall": 0.7002,
+      "f1": 0.4987,
+      "specificity": 0.7169,
+      "true_negatives": 1142,
+      "false_positives": 451,
+      "false_negatives": 122,
+      "true_positives": 285
+    }
+  },
+  "test_metrics_default_threshold": {
+    "threshold": 0.5,
+    "roc_auc": 0.8603,
+    "pr_auc": 0.6922,
+    "precision": 0.5148,
+    "recall": 0.7248,
+    "f1": 0.602,
+    "specificity": 0.8255,
+    "true_negatives": 1315,
+    "false_positives": 278,
+    "false_negatives": 112,
+    "true_positives": 295
+  },
+  "test_metrics_calibrated_threshold": {
+    "threshold": 0.35,
+    "roc_auc": 0.8603,
+    "pr_auc": 0.6922,
+    "precision": 0.3666,
+    "recall": 0.8747,
+    "f1": 0.5167,
+    "specificity": 0.6139,
+    "true_negatives": 978,
+    "false_positives": 615,
+    "false_negatives": 51,
+    "true_positives": 356
+  },
+  "features": {
+    "preprocessed_features": [
+      "CreditScore",
+      "Age",
+      "Tenure",
+      "Balance",
+      "NumOfProducts",
+      "HasCrCard",
+      "IsActiveMember",
+      "EstimatedSalary",
+      "Geography_France",
+      "Geography_Germany",
+      "Geography_Spain",
+      "Gender_Female",
+      "Gender_Male"
+    ],
+    "feature_importances": {
+      "Age": 0.3644,
+      "NumOfProducts": 0.2376,
+      "Balance": 0.0946,
+      "IsActiveMember": 0.0666,
+      "Geography_Germany": 0.0535,
+      "EstimatedSalary": 0.0478,
+      "CreditScore": 0.0462,
+      "Tenure": 0.0246,
+      "Geography_France": 0.0177,
+      "Gender_Male": 0.0165,
+      "Gender_Female": 0.0156,
+      "Geography_Spain": 0.0086,
+      "HasCrCard": 0.0064
+    }
+  }
+}
