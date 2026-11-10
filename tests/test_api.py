@@ -13,6 +13,13 @@ def client():
         yield test_client
 
 
+def test_root_redirect_to_docs(client: TestClient):
+    """Verify GET / redirects to /docs."""
+    response = client.get("/", follow_redirects=False)
+    assert response.status_code in [307, 302]
+    assert response.headers["location"] == "/docs"
+
+
 def test_health_endpoint(client: TestClient):
     """Verify /health returns 200 OK and reports model loaded."""
     response = client.get("/health")

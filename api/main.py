@@ -18,7 +18,7 @@ if str(BASE_DIR) not in sys.path:
 import joblib
 import pandas as pd
 from fastapi import FastAPI, HTTPException, Request, status
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 from sklearn.pipeline import Pipeline
 
 from api.schemas import (
@@ -110,6 +110,12 @@ async def global_exception_handler(request: Request, exc: Exception):
             "message": "An unexpected error occurred while processing the prediction request.",
         },
     )
+
+
+@app.get("/", include_in_schema=False)
+async def root():
+    """Redirect root path to interactive Swagger API documentation."""
+    return RedirectResponse(url="/docs")
 
 
 @app.get(
