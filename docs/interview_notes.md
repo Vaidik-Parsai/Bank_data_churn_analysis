@@ -115,3 +115,4 @@ I would present the empirical **Precision-Recall Curve** (`reports/figures/preci
    - `High Risk` ($p \ge 0.60$): Direct phone outreach from account managers (higher cost).
    - `Medium Risk` ($0.35 \le p < 0.60$): Automated email engagement and automated satisfaction survey (near-zero cost).
    - `Low Risk` ($p < 0.35$): Standard banking communications.
+

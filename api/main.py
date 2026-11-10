@@ -231,3 +231,4 @@ async def predict_batch(batch: BatchPredictionRequest) -> BatchPredictionRespons
         churn_rate_predicted=churn_rate,
         predictions=responses,
     )
+

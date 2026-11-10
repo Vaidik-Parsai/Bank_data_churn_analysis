@@ -165,3 +165,4 @@ def test_predict_batch_empty_list_fails(client: TestClient):
     """Ensure empty batch fails validation with 422."""
     response = client.post("/predict/batch", json={"customers": []})
     assert response.status_code == 422
+
