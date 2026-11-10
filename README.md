@@ -6,11 +6,11 @@ An interview-ready, end-to-end Machine Learning and Business Intelligence soluti
 
 ## 📌 Problem Statement
 
-Customer attrition is one of the costliest operational challenges in retail banking. Acquiring new customers costs 5× to 7× more than retaining existing accounts. In an imbalanced customer portfolio where roughly **20% of customers churn**, standard off-the-shelf models fail by optimizing for accuracy while missing the vast majority of leaving customers.
+Customer attrition is one of the costliest operational challenges in retail banking. Acquiring new customers costs 5× to 7× more than retaining existing accounts. In an imbalanced customer portfolio where roughly **20.37% of customers churn** (1 in every 5 customers), standard off-the-shelf models fail by optimizing for raw accuracy while missing the vast majority of leaving customers.
 
 This project delivers:
-1. **Business Intelligence & Analytics**: Interactive Power BI dashboard and SQL segmentation identifying demographic and behavioral risk factors.
-2. **Machine Learning Experiments**: Detailed exploration of supervised models and unsupervised segmentation.
+1. **Business Intelligence & Analytics**: Interactive Power BI dashboard and SQL segmentation identifying demographic and behavioral risk factors across 10,000 retail banking customers.
+2. **Machine Learning Experiments**: Detailed exploration of supervised models and unsupervised customer segmentation.
 3. **Production ML Pipeline & REST API**: A leak-free Scikit-learn `Pipeline` tuned for **ROC-AUC ($0.8603$)**, with calibrated decision thresholding ($0.35$) prioritizing recall ($87.5\%$), served via FastAPI and containerized with Docker.
 
 ---
@@ -23,7 +23,7 @@ bank-churn-analytics-and-prediction/
 │   ├── power_bi/              # Interactive Power BI dashboard (Bank_Churn_Dashboard.pbix)
 │   ├── sql_queries/           # Numbered SQL queries (01_churn_metrics_and_segmentation.sql)
 │   └── visualizations/        # Exploratory charts (geography, age, tenure, activity, products)
-├── learning_notes/            # 2. Machine Learning Learning Notes
+├── learning_notes/            # 2. Machine Learning Exploration Notes
 │   ├── 01_supervised_models_and_tuning.ipynb         # LR baseline, Trees, Random Forest, XGBoost
 │   ├── 02_unsupervised_clustering_and_segmentation.ipynb  # K-Means, PCA, Hierarchical, DBSCAN
 │   └── 03_deep_learning_ann_scratchpad.ipynb         # Deep learning scratchpad
@@ -101,8 +101,8 @@ Model selection was conducted using **Stratified 5-Fold Cross-Validation** optim
 ### 1. Prerequisites & Virtual Environment
 ```bash
 # Clone the repository
-git clone https://github.com/Vaidik-Parsai/bank-churn-analytics-and-prediction.git
-cd bank-churn-analytics-and-prediction
+git clone https://github.com/Vaidik-Parsai/Bank_data_churn_analysis.git
+cd Bank_data_churn_analysis
 
 # Create and activate virtual environment
 python -m venv venv
@@ -270,3 +270,9 @@ curl -X POST http://localhost:8000/predict/batch \
 
 For a rapid 5-minute technical interview walkthrough or in-depth technical defense, consult:
 - **`docs/interview_notes.md`**: 10 rigorous senior ML interview questions covering leakage prevention, threshold calibration, drift monitoring, latency trade-offs, and stakeholder navigation.
+
+---
+
+### Author
+**Vaidik Parsai**  
+*Data Analytics • Machine Learning • Production ML Engineering*
