@@ -1,9 +1,43 @@
 # 🏦 Bank Customer Churn Analysis & Automation Pipeline
 
 ## 📌 Project Overview
-Customer retention is one of the primary growth drivers in retail banking. This project delivers an end-to-end Business Intelligence solution that analyzes customer demographics, account balances, and product engagement behaviors to identify high-risk segments. 
+Customer retention is one of the primary growth drivers in retail banking. This repository brings together an end-to-end customer churn initiative across three distinct pillars: Business Intelligence / Analytics, Machine Learning Exploration, and a Production-Grade ML Serving Service.
 
-Using this multi-page interactive dashboard, stakeholders can monitor real-time churn metrics, drill down into behavioral risk patterns, and review algorithmic data-driven recommendations to minimize customer attrition.
+---
+
+## 🗺️ Repository Map
+
+```
+bank-churn-analytics-and-prediction/
+├── analytics/                 # 1. Data-Analyst Deliverables
+│   ├── power_bi/              # Interactive Power BI dashboard (.pbix)
+│   ├── sql_queries/           # Production SQL analysis and segmentation queries
+│   └── visualizations/        # Exploratory charts and visual distributions
+├── learning_notes/            # 2. Machine Learning Exploration Notes
+│   ├── 01_supervised_models_and_tuning.ipynb         # LR baseline, Trees, Random Forest, XGBoost
+│   ├── 02_unsupervised_clustering_and_segmentation.ipynb  # K-Means, PCA, Hierarchical, DBSCAN
+│   └── 03_deep_learning_ann_scratchpad.ipynb         # Deep learning scratchpad
+├── notebooks/                 # EDA & BI data preparation
+│   └── 01_eda_and_segment_analysis.ipynb             # Full exploratory data analysis & cleaning
+├── data/                      # Dataset repository (raw & cleaned CSVs)
+├── src/churn/                 # 3. Production ML Codebase (Scikit-Learn Pipeline)
+│   ├── config.py              # Schema, feature groups, random states
+│   ├── data.py                # Data loading and stratified splitting
+│   ├── pipeline.py            # ColumnTransformer & RandomForest Pipeline
+│   ├── train.py               # Cross-validation & hyperparameter tuning
+│   └── evaluate.py            # Metrics, confusion matrix, ROC-AUC evaluation
+├── models/                    # Serialized pipeline artifact & metadata.json
+├── api/                       # Production FastAPI prediction service
+├── tests/                     # Unit & integration tests (pipeline & API)
+├── reports/figures/           # Evaluation charts (ROC curve, confusion matrix, importance)
+├── docs/                      # Technical documentation & interview defense notes
+└── Dockerfile, requirements.txt, .gitignore, README.md
+```
+
+### Three Parts Explained
+1. **Analytics & Business Intelligence (`analytics/` & `notebooks/`)**: Interactive Power BI dashboard, analytical SQL queries (demographics, segmentation, cohort retention), and exploratory data analysis.
+2. **Machine Learning Notes (`learning_notes/`)**: Systematic explorations of supervised classification algorithms (Logistic Regression, Decision Trees, Random Forest, XGBoost) and unsupervised customer segmentation (K-Means, PCA, Hierarchical, DBSCAN).
+3. **Production ML & API Service (`src/churn/`, `api/`, `models/`)**: An interview-ready, production-grade pipeline built with scikit-learn, tuned for ROC-AUC on imbalanced churn data, packaged with serialized metadata, and deployed via a validated FastAPI REST API.
 
 ---
 
